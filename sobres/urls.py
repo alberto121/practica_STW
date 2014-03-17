@@ -1,0 +1,10 @@
+from django.conf.urls import patterns,
+include, url
+from isobres.views import *
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+	# Examples:
+	url(r'^$', mainpage, name='home'),
+	url(r'^user/(\w+)/$', userpage),
